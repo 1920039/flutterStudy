@@ -1,0 +1,17 @@
+{
+    "editor.formatOnSave": true,
+    "dart.openDevTools": "flutter",
+    "git.openRepositoryInParentFolders": "never",
+    // 저장 시 fixAll/정리 실행 
+    "[dart]": {
+        "editor.codeActionsOnSaveMode": "explicit", // codeAction은 명시적으로 저장할 때만 실행함 = 자동저장시에는 실행x
+        "editor.codeActionsOnSave": {
+            "source.fixAll": "explicit", // const를 붙일 수 있는 곳에 붙임. analysis_options.yaml 파일에도 다른 코드 추가 필요(prefer_const_constructrs: true 등 4줄...) 
+            // const를 쓰면, 앱 실행 시 스크롤처럼 '리빌드'가 많은 화면에서 속도 ↑
+            "source.organizeImports": "explicit", // import 정리할 수 있는 것 하기     
+            "editor.wordBasedSuggestions": "never", // 단어 기반의 제안은 끄고 언어 서버 기반 제안만 받음  
+        },
+    },
+    "dart.previewFlutterUiGuides": true,
+    "editor.hover.enabled": false,
+}
